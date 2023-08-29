@@ -1,11 +1,12 @@
 from telebot import *
 import requests
 
+#-------put your API token here--------------
 bot = telebot.TeleBot("")
 
 @bot.message_handler(commands=["start"])
 def welcome(message):
-    bot.send_message(message.chat.id,"""وعليكم السلام ورحمة الله
+    bot.send_message(message.chat.id,"""
     
     /start ---> start the bot 
     /Link ---> start the service
@@ -24,14 +25,12 @@ def short(link):
 
 @bot.message_handler(commands=["Link"])
 def Link(message):
-    bot.send_message(message.chat.id, """
-                    اكتب اي رابط و سوف يتم اختصاره
-""")
+    bot.send_message(message.chat.id, "")
 
 
 @bot.message_handler(commands=["SourceCode"])
 def Link(message):
-    bot.send_message(message.chat.id, "الكود المصدري للبوت")
+    bot.send_message(message.chat.id, "")
 
 
 
